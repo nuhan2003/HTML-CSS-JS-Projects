@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.container{
+    height: 100vh;
+    width: 100%;
+}
+.heading{
+    margin-top: 10vh;
+    margin-left: 3vh;
+    font-size: 3em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+.main{
+    background-color:aqua;
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+}
+.mainheading{
+    text-align: center;
+    font-size: 2.5em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+
+}
+.timeContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    flex-direction: column;
+    margin-top: 3vh;
+    font-family: 'Montserrat', sans-serif;
+}
+.number{
+    font-size: 3.5em;
+    margin-top: 1vh;
+    font-family: 'Montserrat', sans-serif;
+}
+.text{
+    font-size: 1.2em;
+    color: rgb(121, 121, 134);
+
+}
+.paragraph{
+    width: 100%;
+    margin-top: 3vh;
+    display: flex;
+    justify-content: center;
+}
+.paragraph p {
+    width: 90%;
+    background-color: white;
+    padding: 2vh;
+    font-size: 2.5em;
+    border-radius: 15px;
+    color: rgba(0, 0, 0,0.4);
+    font-family: 'Roboto Mono', monospace;
+    line-height: 1.7;
+}
+.paragraph p span{
+    border-radius: 8px;
+    width: fixed;
+    position: relative;
+    font-family: 'Roboto Mono', monospace;
+
+}
+.paragraph p span.correct{background:rgb(116, 255, 116)}
+.paragraph p span.incorrect{background:rgb(255, 118, 118)}
+
+
+.paragraph p span.blink::before{
+    content: "";
+    position: absolute;
+    left: 0%;
+    bottom: 0;
+    background-color: rgb(56, 199, 255);
+    height: 3px;
+    width: 100%;
+    animation: blink 1s infinite;
+    border-radius: 3px;
+}
+@keyframes blink{
+    0%{opacity: 0;}
+    50%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+input{
+    height: 0;
+    width: 0;
+    border: none;
+}
+
+
+
+
+body{position: relative}
+
+.after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;   
+}
+.main-box{
+    height: 50%;
+    width: 40%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 15px 15px rgba(0,0,0,.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.result{
+    font-size: 3em;
+    font-weight: 700;
+}
+.wpm-container{
+    font-size: 3em;
+}
+.acquracy-container{
+    font-size: 3em;
+}
+.again-button button{
+    background: rgb(10, 186, 255);
+    height: 6vh;
+    width: 20vh;
+    border-radius: 10px;
+    font-size: 1.5em;
+    color: white;
+    font-weight: 500;
+    border: none;
+    transition: .3s ease;
+    cursor: pointer;
+}
+.again-button button:hover{
+    background:rgba(10, 186, 255,.7);
+    color:rgba(0, 0, 0,0.6);
+    transform: translateY(-1vh);
+    box-shadow: 0px 1px 10px 5px rgba(0, 0, 0,0.4);
+}
+.again-button button:active{
+    transform: translateY(1vh);
+}
